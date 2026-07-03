@@ -1,5 +1,7 @@
 # Entity Resolver
 
+[![CI](https://github.com/ItsMrZxD/entity_resolver/actions/workflows/ci.yml/badge.svg)](https://github.com/ItsMrZxD/entity_resolver/actions/workflows/ci.yml)
+
 Fuzzy entity resolution between two CSV datasets that contain the same
 companies under slightly different names. Every record in dataset A is
 matched to its most similar record in dataset B with a 0–100 confidence
