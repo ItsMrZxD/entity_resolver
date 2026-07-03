@@ -1,0 +1,13 @@
+# Lint configuration — single source of truth for local runs and CI.
+# Usage: pip install ruff && ruff check .
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+# E/W: pycodestyle, F: pyflakes, I: import sorting
+select = ["E", "W", "F", "I"]
+
+[tool.ruff.lint.isort]
+# "main" is this project's own module, not a third-party package.
+known-first-party = ["main"]

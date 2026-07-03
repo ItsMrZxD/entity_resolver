@@ -1,0 +1,31 @@
+# Continuous integration: lint with Ruff, then run the unit tests.
+# Runs on every push and pull request, against the oldest supported
+# Python (3.11) and a current release.
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.14"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt ruff
+
+      - name: Lint (config in pyproject.toml)
+        run: ruff check .
+
+      - name: Run tests
+        run: python -m unittest -v
