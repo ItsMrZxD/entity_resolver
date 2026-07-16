@@ -1,6 +1,6 @@
 # Entity Resolver
 
-[![CI](https://github.com/ItsMrZxD/entity_resolver/actions/workflows/ci.yml/badge.svg)](https://github.com/ItsMrZxD/entity_resolver/actions/workflows/ci.yml)
+[![CI](https://github.com/ItsMrZxD/entity-resolver/actions/workflows/ci.yml/badge.svg)](https://github.com/ItsMrZxD/entity-resolver/actions/workflows/ci.yml)
 
 Fuzzy entity resolution between two CSV datasets that contain the same
 companies under slightly different names. Every record in dataset A is
@@ -13,7 +13,7 @@ Built with **Python 3.11+**, **pandas**, and **RapidFuzz**.
 ## Project structure
 
 ```
-entity_resolver/
+entity-resolver/
 ├── .github/
 │   └── workflows/
 │       └── ci.yml       # CI: Ruff lint + unit tests on every push
@@ -35,7 +35,7 @@ entity_resolver/
 ## Installation
 
 ```bash
-cd entity_resolver
+cd entity-resolver
 python -m venv .venv
 .venv\Scripts\Activate.ps1     # Windows PowerShell
 # .venv\Scripts\activate.bat   # Windows cmd
